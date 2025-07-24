@@ -1,5 +1,5 @@
-// 直接使用本地已安装的Galacean Effects
-import { Player } from './node_modules/@galacean/effects/dist/index.mjs';
+// 使用CDN加载Galacean Effects库
+import { Player } from 'https://unpkg.com/@galacean/effects@2.5.5/dist/index.mjs';
 
 class PurchaseSuccessAnimation {
     constructor() {
@@ -143,7 +143,7 @@ class PurchaseSuccessAnimation {
             };
             
             // 加载动画JSON文件（使用URL编码处理空格）
-            const sceneUrl = './Purchase_Success%20/content.json';
+            const sceneUrl = './Purchase_Success /content.json';
             console.log('📂 加载场景文件:', sceneUrl);
             
             // 合并图片和文本配置作为variables
@@ -360,7 +360,7 @@ class PurchaseSuccessAnimation {
                 <div style="
                     width: 100%; 
                     height: 100%; 
-                    background-image: url('./Purchase_Success%20/downgrade/content.png'); 
+                    background-image: url('./Purchase_Success /downgrade/content.png'); 
                     background-size: contain; 
                     background-repeat: no-repeat; 
                     background-position: center;
@@ -492,7 +492,7 @@ class PurchaseSuccessAnimation {
         
         try {
             // 导入TextComponent
-            const { TextComponent } = await import('./node_modules/@galacean/effects/dist/index.mjs');
+            const { TextComponent } = await import('https://unpkg.com/@galacean/effects@2.5.5/dist/index.mjs');
             
             // 设置button_text文本
             if (dynamicTexts.button_text) {
@@ -527,7 +527,7 @@ class PurchaseSuccessAnimation {
         
         try {
             // 导入SpriteComponent
-            const { SpriteComponent } = await import('./node_modules/@galacean/effects/dist/index.mjs');
+            const { SpriteComponent } = await import('https://unpkg.com/@galacean/effects@2.5.5/dist/index.mjs');
             
             // 替换content图片
             if (dynamicImages.content && dynamicImages.content[0]) {
@@ -742,7 +742,7 @@ class PurchaseSuccessAnimation {
                 <div style="
                     width: 100%; 
                     height: 100%; 
-                    background-image: url('./Purchase_Success%20/downgrade/content.png'); 
+                    background-image: url('./Purchase_Success /downgrade/content.png'); 
                     background-size: contain; 
                     background-repeat: no-repeat; 
                     background-position: center;
