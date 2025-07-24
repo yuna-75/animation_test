@@ -25,7 +25,7 @@
 
 ## 🚀 在线演示
 
-访问 [GitHub Pages 演示地址](https://your-username.github.io/animation_test) 查看实时效果
+访问 [GitHub Pages 演示地址](https://yuna-75.github.io/animation_test) 查看实时效果
 
 ## 🛠️ 本地开发
 
