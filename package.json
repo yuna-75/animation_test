@@ -1,0 +1,28 @@
+{
+  "name": "purchase-success-animation",
+  "version": "1.0.0",
+  "description": "购买成功动画展示项目 - 基于Galacean Effects引擎",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "start": "python3 -m http.server 8080",
+    "serve": "python3 -m http.server 3000",
+    "test": "python3 -m http.server 9000"
+  },
+  "keywords": [
+    "galacean-effects",
+    "animation",
+    "purchase-success",
+    "interactive",
+    "webgl"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "dependencies": {
+    "@galacean/effects": "^2.5.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

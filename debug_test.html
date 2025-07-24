@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态换图测试</title>
+</head>
+<body>
+    <h1>动态换图测试</h1>
+    
+    <div>
+        <h2>当前场景配置测试：</h2>
+        <button onclick="testDefaultScenario()">测试默认场景</button>
+        <button onclick="testVipScenario()">测试VIP场景</button>
+    </div>
+    
+    <div id="result"></div>
+    
+    <script type="module">
+        // 模拟动态图片配置函数
+        function getDynamicImagesByScenario(scenario) {
+            const scenarios = {
+                'default': {
+                    content: [
+                        'https://i.ibb.co/9mfsG8XM/black-level.png',
+                        './Purchase_Success /images/04a90d7bc3db830ae1f477b33523d5ce.png'
+                    ],
+                    button_bg: [
+                        'https://i.ibb.co/wNMpNZ2x/button.png',
+                        './Purchase_Success /images/1896408455d98e4b89bd7fcb0f9c1f15.png'
+                    ]
+                },
+                'vip': {
+                    content: [
+                        'https://i.ibb.co/RT1rKS7s/funding-level.png',
+                        './Purchase_Success /images/04a90d7bc3db830ae1f477b33523d5ce.png'
+                    ],
+                    button_bg: [
+                        'https://i.ibb.co/VWtSkwpV/button-1.png',
+                        './Purchase_Success /images/1896408455d98e4b89bd7fcb0f9c1f15.png'
+                    ]
+                }
+            };
+            
+            return scenarios[scenario] || scenarios['default'];
+        }
+        
+        window.testDefaultScenario = function() {
+            const config = getDynamicImagesByScenario('default');
+            document.getElementById('result').innerHTML = 
+                `<h3>默认场景配置:</h3><pre>${JSON.stringify(config, null, 2)}</pre>`;
+        }
+        
+        window.testVipScenario = function() {
+            const config = getDynamicImagesByScenario('vip');
+            document.getElementById('result').innerHTML = 
+                `<h3>VIP场景配置:</h3><pre>${JSON.stringify(config, null, 2)}</pre>`;
+        }
+    </script>
+</body>
+</html> 
